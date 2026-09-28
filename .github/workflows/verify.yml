@@ -1,0 +1,31 @@
+# Copyright 2026 Stephan Schlöpke
+# SPDX-License-Identifier: Apache-2.0
+
+name: Verify formula
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-15-intel, ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@e99025eb970cfa124b8284a35463d87426917478
+        with:
+          stable: true
+      - name: Verify release installation
+        shell: bash
+        run: |
+          brew style schloepke/gameeventscript/ges
+          brew install schloepke/gameeventscript/ges
+          brew test schloepke/gameeventscript/ges
+          brew uninstall ges
