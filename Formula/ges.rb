@@ -4,30 +4,30 @@
 class Ges < Formula
   desc "Portable, event-driven scripting language CLI"
   homepage "https://gameeventscript.org"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     depends_on macos: :sequoia
 
     on_arm do
-      url "https://github.com/schloepke/GameEventScript/releases/download/0.2.0/ges-swift-0.2.0-osx-arm64.tar.gz"
-      sha256 "976fc706cc7fbabc48a05e9723022863d053875d73ca328bb486252db84dd089"
+      url "https://github.com/schloepke/GameEventScript/releases/download/0.3.0/ges-swift-0.3.0-osx-arm64.tar.gz"
+      sha256 "ebadfee9ffde3abc43a2266acf54b4fe72dc2ba7625ef5e326a51acc7fcfdbcd"
     end
     on_intel do
-      url "https://github.com/schloepke/GameEventScript/releases/download/0.2.0/ges-swift-0.2.0-osx-x64.tar.gz"
-      sha256 "25995f6ed297f2b2b537c28b046b122521c8bb3044c00e0d331be50dee870be5"
+      url "https://github.com/schloepke/GameEventScript/releases/download/0.3.0/ges-swift-0.3.0-osx-x64.tar.gz"
+      sha256 "a4fb8d7ab68046ddf47ddbd90529c792eb4c7e917981605837c73ab60c6d6a7f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/schloepke/GameEventScript/releases/download/0.2.0/ges-swift-0.2.0-linux-arm64.tar.gz"
-      sha256 "9428d6aebffbec13814916c462839d724934a2a41b243d9a81ee577bb1d3e76b"
+      url "https://github.com/schloepke/GameEventScript/releases/download/0.3.0/ges-swift-0.3.0-linux-arm64.tar.gz"
+      sha256 "4523a6e1cb4d7d9bd66ba2c82c08ba49dc85783ddeaa0fcbee64c9b859eb0e4c"
     end
     on_intel do
-      url "https://github.com/schloepke/GameEventScript/releases/download/0.2.0/ges-swift-0.2.0-linux-x64.tar.gz"
-      sha256 "f0d3de77b5f06bc43990cf9d630256a66828dd5cb2afed0054f56915e766e2f7"
+      url "https://github.com/schloepke/GameEventScript/releases/download/0.3.0/ges-swift-0.3.0-linux-x64.tar.gz"
+      sha256 "10fc7510df6a91efd987b723550f107c592092564ae52fe89624c95bb9f7f143"
     end
   end
 
